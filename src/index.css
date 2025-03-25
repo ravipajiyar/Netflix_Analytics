@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6366f1;
+  --secondary: #9ca3af;
+  --background: #f3f4f6;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --accent: #3b82f6;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+.sidebar-separator{
+     border-top: 1px solid  #4b5563;
+      margin-top: 1.5rem;
+     margin-bottom: 1.5rem;
+
+}
