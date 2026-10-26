@@ -122,4 +122,24 @@ if(!data || data.length === 0) return [];
   if(year === 'all') return data;
  return data.filter(item => item[key] === year);
 
+<<<<<<< HEAD
 }
+=======
+}
+export const RELEASE_YEARS = Array.from({ length: 22 }, (_, index) => 2021 - index);
+
+export const buildYearOptions = (years = RELEASE_YEARS) => [
+  { value: 'all', label: 'All years' },
+  ...years.map((year) => ({ value: String(year), label: String(year) })),
+];
+
+export const formatNumber = (value) => {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return '—';
+  return Number(value).toLocaleString('en-US');
+};
+
+export const formatPercent = (value, digits = 0) => {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return '—';
+  return `${Number(value).toFixed(digits)}%`;
+};
+>>>>>>> 7eb8cdf (ui enhanced and design upgraded)

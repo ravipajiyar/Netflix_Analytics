@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 :root {
   --primary: #6366f1;
   --secondary: #9ca3af;
@@ -20,3 +21,106 @@ body {
      margin-bottom: 1.5rem;
 
 }
+=======
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 font-sans text-zinc-300 antialiased;
+    background-image:
+      radial-gradient(1100px 560px at 88% -12%, rgba(229, 9, 20, 0.16), transparent 60%),
+      radial-gradient(900px 520px at -8% 4%, rgba(99, 102, 241, 0.12), transparent 56%),
+      radial-gradient(760px 520px at 55% 118%, rgba(236, 72, 153, 0.08), transparent 62%);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-white;
+  }
+
+  ::selection {
+    @apply bg-brand/40 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full border-2 border-transparent bg-white/10 bg-clip-padding;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/20;
+  }
+}
+
+@layer components {
+  .card {
+    @apply relative overflow-hidden rounded-2xl border border-white/[0.07] bg-ink-850/80 backdrop-blur-xl;
+    box-shadow:
+      0 30px 70px -40px rgba(0, 0, 0, 0.95),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .card::before {
+    content: '';
+    @apply pointer-events-none absolute inset-x-0 top-0 h-px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+  }
+
+  .card-hover {
+    @apply transition duration-300 hover:-translate-y-1 hover:border-white/[0.14] hover:shadow-glow-soft;
+  }
+
+  .field {
+    @apply rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2.5 text-sm text-zinc-200 outline-none transition;
+  }
+
+  .field:focus {
+    @apply border-brand-500/60 ring-2 ring-brand-500/20;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-medium text-zinc-300;
+  }
+
+  .icon-tile {
+    @apply grid h-10 w-10 place-items-center rounded-xl border;
+  }
+
+  .data-table {
+    @apply w-full border-collapse text-left text-sm;
+  }
+
+  .data-table thead th {
+    @apply whitespace-nowrap border-b border-white/[0.08] px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-zinc-500;
+  }
+
+  .data-table tbody td {
+    @apply border-b border-white/[0.05] px-4 py-3 text-zinc-300;
+  }
+
+  .data-table tbody tr {
+    @apply transition-colors hover:bg-white/[0.03];
+  }
+
+  .data-table tbody tr:last-child td {
+    @apply border-b-0;
+  }
+}
+>>>>>>> 7eb8cdf (ui enhanced and design upgraded)

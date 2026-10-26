@@ -1,5 +1,9 @@
 import axios from 'axios';
+<<<<<<< HEAD
 const API_BASE_URL = 'http://localhost:3001';
+=======
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
+>>>>>>> 7eb8cdf (ui enhanced and design upgraded)
 
 export const fetchNetflixData = async () => {
     try {
