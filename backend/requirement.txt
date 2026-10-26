@@ -1,4 +1,0 @@
-Flask
-pandas
-textblob
-Flask-Cors

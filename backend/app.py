@@ -1,16 +1,25 @@
+import os
+from pathlib import Path
+
 from flask import Flask, jsonify
 from flask_cors import CORS
 import pandas as pd
 from textblob import TextBlob
 
 app = Flask(__name__)
-CORS(app)
+
+allowed_origins = os.getenv('CORS_ORIGINS', '*').strip()
+if allowed_origins == '*':
+    CORS(app)
+else:
+    CORS(app, origins=[origin.strip() for origin in allowed_origins.split(',') if origin.strip()])
 
 # Load your CSV data
 try:
-    netflix_shows = pd.read_csv('netflix_titles.csv')
+    dataset_path = Path(__file__).resolve().parent / 'netflix_titles.csv'
+    netflix_shows = pd.read_csv(dataset_path)
 except FileNotFoundError:
-    print("Error: netflix_titles.csv not found. Please ensure the CSV file is in the same directory as app.py")
+    print(f"Error: {dataset_path} not found. Please ensure the CSV file is in the same directory as app.py")
     exit()
 
 def get_maturity_ratings(df):
@@ -74,6 +83,10 @@ def get_duration_analysis(df):
     duration_series = df['duration'].str.split(',', expand=True).stack()
     duration_df = duration_series.reset_index(drop=True).to_frame(name='Duration')
     return duration_df.to_dict(orient='records')
+@app.route('/health')
+def health_check():
+    return jsonify({"status": "ok"})
+
 @app.route('/maturity_ratings')
 def get_maturity_ratings_route():
     return jsonify(get_maturity_ratings(netflix_shows))

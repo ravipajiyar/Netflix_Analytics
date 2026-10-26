@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-// src/components/Loading.jsx
-import React from 'react';
-
-const Loading = () => {
-  return (
-    <div className="flex justify-center items-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500"></div>
-        Loading...
-=======
 
 const Loading = () => {
   return (
@@ -47,13 +37,8 @@ const Loading = () => {
         <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/10 border-t-brand" />
         Loading analytics…
       </div>
->>>>>>> 7eb8cdf (ui enhanced and design upgraded)
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default Loading;
-=======
-export default Loading;
->>>>>>> 7eb8cdf (ui enhanced and design upgraded)

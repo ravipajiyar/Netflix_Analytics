@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-// src/components/PieChart.jsx
-
-import React from 'react';
-import Plot from 'react-plotly.js';
-
-const PieChart = ({ data, title }) => {
-  if (!data || data.length === 0) return <p>No data to display</p>;
-
-    const labels = data.map(item => item.M_rating);
-    const values = data.map(item => item.counts);
-
-  const chartData = [
-    {
-      values: values,
-      labels: labels,
-      type: 'pie',
-=======
 import Plot from 'react-plotly.js';
 import EmptyState from './EmptyState';
 import { CHART_COLORS, baseLayout, chartConfig, sentimentColor } from './chartTheme';
@@ -52,23 +34,10 @@ const PieChart = ({
       textfont: { size: 11, color: '#ffffff' },
       hovertemplate: '<b>%{label}</b><br>%{value} · %{percent}<extra></extra>',
       automargin: true,
->>>>>>> 7eb8cdf (ui enhanced and design upgraded)
     },
   ];
 
   const layout = {
-<<<<<<< HEAD
-    title: title,
-    margin: { l: 20, r: 20, t: 40, b: 20 },
-  };
-
-  return (
-      <Plot data={chartData} layout={layout} />
-  );
-};
-
-export default PieChart;
-=======
     ...baseLayout,
     title: title ? { text: title, font: { size: 12, color: '#a1a1aa' } } : undefined,
     height,
@@ -96,4 +65,3 @@ export default PieChart;
 };
 
 export default PieChart;
->>>>>>> 7eb8cdf (ui enhanced and design upgraded)

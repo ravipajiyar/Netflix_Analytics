@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-// src/components/YearSlider.jsx
-
-import React from 'react';
-
-const YearSlider = ({ minYear, maxYear, onChange }) => {
-  return (
-    <div className="mb-4">
-      <label htmlFor="year-slider" className="block text-gray-700 font-medium mb-1">
-        Select Release Year Range:
-      </label>
-      <div className="flex items-center">
-        <input
-          type="range"
-          id="year-slider"
-          min={minYear}
-          max={maxYear}
-          defaultValue={minYear}
-          onChange={(e) => onChange(parseInt(e.target.value, 10))}
-          className="mr-2 flex-1"
-        />
-        <span className="text-gray-700">{minYear} - {maxYear}</span>
-      </div>
-
-=======
 
 const YearSlider = ({ minYear, maxYear, value, onChange }) => {
   return (
@@ -51,13 +26,8 @@ const YearSlider = ({ minYear, maxYear, value, onChange }) => {
         <span>{minYear}</span>
         <span>{maxYear}</span>
       </div>
->>>>>>> 7eb8cdf (ui enhanced and design upgraded)
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default YearSlider;
-=======
-export default YearSlider;
->>>>>>> 7eb8cdf (ui enhanced and design upgraded)

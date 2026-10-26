@@ -1,6 +1,5 @@
 {
-  "name": "redcross_web",
-  "homepage": "https://yrcc.ku.edu.np",
+  "name": "netflix-analytics",
   "private": true,
   "version": "0.0.0",
   "type": "module",

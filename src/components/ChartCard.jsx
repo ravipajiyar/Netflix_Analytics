@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-// src/components/ChartCard.jsx
-import React from 'react';
-
-const ChartCard = ({ title, children, className = 'mb-4' }) => {
-  return (
-    <div className={`bg-white shadow rounded p-4 ${className}`}>
-      {title && <h3 className="text-lg font-semibold mb-2">{title}</h3>}
-      {children}
-=======
 
 const ChartCard = ({
   title,
@@ -37,13 +27,8 @@ const ChartCard = ({
         </div>
       )}
       <div className={bodyClassName}>{children}</div>
->>>>>>> 7eb8cdf (ui enhanced and design upgraded)
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default ChartCard;
-=======
-export default ChartCard;
->>>>>>> 7eb8cdf (ui enhanced and design upgraded)
