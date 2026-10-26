@@ -465,6 +465,7 @@ No license file is currently included in this repository. Unless a license is ad
 
 - GitHub: [@ravipajiyar](https://github.com/ravipajiyar)
 - LinkedIn: [Ravi Pajiyar](https://www.linkedin.com/in/ravi-pajiyar-a4a5512ba/)
+- Live Link: https://netflix-analytics-gules.vercel.app/
 
 ---
 
